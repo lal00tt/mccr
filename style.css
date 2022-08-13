@@ -18,7 +18,7 @@
 body, * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body{
@@ -28,8 +28,12 @@ body{
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  overflow: hidden;
   background: linear-gradient(72.33deg, #1798E1 -0.52%, #004AAD 100%);
+}
+ 
+main{
+  width: 100%;
+  height: 100vh;
 }
 
 a {
@@ -68,20 +72,24 @@ h3 {
 }
 
 .principal_box{
-  max-width: 1000px;
+  width: 100%;
+  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   place-items: center;
+  place-content: center;
+  padding: 100px;
 }
 
 .svg_header, .svg_footer {
   position: absolute;
-  height: min-content;
   z-index: -1;
+  width: 100%;
+  height: 50%;
 }
+
 .svg_header {
-  
   top: 0;
   right: 0;
 }
@@ -90,16 +98,36 @@ h3 {
   left: 0;
 }
 
-.svg_footer > svg {
+.svg_header > picture {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  right:0;
 }
-.svg_header > svg {
+
+.svg_header > picture > img {
   position: absolute;
   top: 0;
   right: 0;
+  width: 80%;
+  height: 100%;
 }
+
+.svg_footer > picture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.svg_footer > picture > img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+}
+
 
 .container_icons{
   display: flex;
